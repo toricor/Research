@@ -154,11 +154,11 @@ for num in b:
             
             r_enz_list = \
             [('CTCGAG','XhoI'),
-            ('GAATTC','EcoRI'),
-            ('CTGCAG','PstI'),
-            ('GATATC','EcoRV'),
-            ('TTTAAA','DraI'),
-            ('CATATG','NdeI')]
+             ('GAATTC','EcoRI'),
+             ('CTGCAG','PstI'),
+             ('GATATC','EcoRV'),
+             ('TTTAAA','DraI'),
+             ('CATATG','NdeI')]
             r_enz_counts_list = []
             wt = mut = 0; enz =""
             for seq,enz in r_enz_list:
