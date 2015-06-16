@@ -141,7 +141,7 @@ for num in b:
             continue
         else:
             try:
-                #wt_seq = left_seq + mutation + right_seq
+                #ex. mut_seq = left_seq + mutation + right_seq
                 wt_seq=data_list[4]+data_list[6]+data_list[5]   
                 mut_seq=data_list[4]+data_list[7]+data_list[5]  
             except:
