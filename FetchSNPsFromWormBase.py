@@ -49,9 +49,9 @@ for num in b:
     val_url4= url1 + wb + field4
 
     try:
-        ###
-        time.sleep(0.1) # do not send too many requests to the server per second
-        ###
+        #################
+        time.sleep(0.5) # do not send too many requests to the server per second
+        #################
         headers = {'content-type': 'application/json'}
         res1 = requests.get(val_url1, headers=headers)
         res2 = requests.get(val_url2, headers=headers)
@@ -82,7 +82,7 @@ for num in b:
             chr_list.append(h[0])
             physical_pos.append(h[1].split('..')[0])
         except:
-            print wb,'Error genomic_position'
+            #print wb,'Error genomic_position'
             error_log[wb] = 'Error genomic_position'
             continue
         
