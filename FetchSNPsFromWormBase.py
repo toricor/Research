@@ -153,16 +153,12 @@ for num in b:
             mut_seq_upper= mut_seq.upper()
             
             r_enz_list = \
-            [('GAATTC','EcoRI'),
-             ('CTTAAG','EcoRI'),
+            [('CTCGAG','XhoI'),
+             ('GAATTC','EcoRI'),
              ('CTGCAG','PstI'),
-             ('GACGTC','PstI'),
              ('GATATC','EcoRV'),
-             ('CTATAG','EcoRV'),
              ('TTTAAA','DraI'),
-             ('AAATTT','DraI'),
-             ('AAGCTT','HindIII'),
-             ('TTCGAA','HindIII')]
+             ('CATATG','NdeI')]
             r_enz_counts_list = []
             wt = mut = 0; enz =""
             for seq,enz in r_enz_list:
