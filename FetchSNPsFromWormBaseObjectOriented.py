@@ -104,11 +104,15 @@ class WBVarNum:
         mut_count = mut_seq.count(recog_seq)
         return wt_count, mut_count, enz_name
     	
-for num in b:  
+for num in b:
+    # send request and get json data
     #num[0] == WBVar00000899 or ['WBVar00000899']
     wbvarnumber = num[0].strip("'[]")
     wbvarnum = WBVarNum(wbvarnumber)
     wbvarnum.set_valid_urls(wbvarnumber, WBVarNum.fields)
+    #################
+    time.sleep(0.3) # do not send too many requests to the server per second
+    #################
     wbvarnum.fetch_json_data_from_wormbase(wbvarnumber)
     
     # parse          
@@ -117,6 +121,7 @@ for num in b:
     wbvarnum.set_flanking_sequences()
     wbvarnum.set_nucleotide_change()
     
+    # extract restriction enzyme sites
     r_enz_list = \
     [('CTCGAG','XhoI'),
      ('GAATTC','EcoRI'),
