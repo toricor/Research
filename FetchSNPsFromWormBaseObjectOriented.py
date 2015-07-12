@@ -9,8 +9,7 @@
 
 import requests
 import csv
-#import time
-#import json
+import time
 error_log = {} # {"WBVar00000899": "Error Message"}
 
 ###############
