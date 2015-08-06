@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# FetchSNPsFromWormBaseObjectOriented.py
+# FetchSNPsFromWormBaseObjectOrientedCleaned.py
 # input: WBVariation Number (SNPs data)
 # output: corresponding data from WormBase (Chromosome, physical pos., genetic pos., left flanking seq., 
 # right flanking seq., is applicable the restriction enzyme
