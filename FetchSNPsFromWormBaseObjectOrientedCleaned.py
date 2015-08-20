@@ -96,7 +96,8 @@ if __name__ == "__main__":
 
     ###############
     input_filename = 'WBVar_Strains_test.csv'             #WBVar.Num. file name
-    output_filename = 'SNPsData_object_oriented.csv' 	  
+    output_filename = 'SNPsData_object_oriented.csv' 	 
+    sleep_time = 0.3 # sec
     ###############
 
     f = open(input_filename,'rb') 
@@ -109,9 +110,7 @@ if __name__ == "__main__":
         wbvarnumber = row[0].strip("'[]")
         variation = WBVar(wbvarnumber)
         variation.set_valid_urls(wbvarnumber, WBVar.fields)
-        #################
-        time.sleep(0.3) # do not send too many requests to the server per second
-        #################
+        time.sleep(sleep_time) # do not send too many requests to the server per second
         variation.fetch_json_data_from_wormbase(wbvarnumber)
 
         # parse          
