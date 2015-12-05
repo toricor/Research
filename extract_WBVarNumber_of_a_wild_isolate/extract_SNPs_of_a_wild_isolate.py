@@ -5,7 +5,7 @@
 import csv
 
 ##########################
-strain_name = "RC301"     # 抽出したいwild isolateのストレイン名
+strain_name = "CB4858"     # 抽出したいwild isolateのストレイン名
 ##########################
 
 f = open("WBVarNumbers_to_wild_isolates_WS244.csv", "rb") # input_filename

@@ -99,9 +99,9 @@ if __name__ == "__main__":
     error_log = {} # {"WBVar00000899": "Error Message"}
 
     ###############
-    input_filename = 'sample_input_for_fetch_SNPs_from_wormbase_v2.csv'     #the file name of WBVariation numbers 
-    output_filename = 'sample_output_for_fetch_SNPs_from_wormbase_v2.csv' 	  #the result file
-    sleep_time = 0.3 # sec
+    input_filename = "WbVarNumToWildIsolate_AB1.csv"#'sample_input_for_fetch_SNPs_from_wormbase_v2.csv'     #the file name of WBVariation numbers 
+    output_filename = "fetched_AB1.csv"#'sample_output_for_fetch_SNPs_from_wormbase_v2.csv' 	  #the result file
+    sleep_time = 0.0#3 # sec
     ###############
 
     f = open(input_filename,'rb') 
@@ -115,14 +115,20 @@ if __name__ == "__main__":
         variation = WBVar(wbvarnumber)
         variation.set_valid_urls(wbvarnumber, WBVar.fields)
         time.sleep(sleep_time) # do not send too many requests to the server per second
-        variation.fetch_json_data_from_wormbase(wbvarnumber)
-
+        try:            
+            variation.fetch_json_data_from_wormbase(wbvarnumber)
+        except:
+            continue
+            
+        
         # parse          
-        variation.set_physical_position()  
-        variation.set_genetic_position()
-        variation.set_flanking_sequences()
-        variation.set_nucleotide_change()
-
+        try:
+            variation.set_physical_position()  
+            variation.set_genetic_position()
+            variation.set_flanking_sequences()
+            variation.set_nucleotide_change()
+        except:
+            continue
         # extract restriction enzyme sites
         r_enz_list = \
         [('CTCGAG','XhoI'),
