@@ -99,8 +99,8 @@ if __name__ == "__main__":
     error_log = {} # {"WBVar00000899": "Error Message"}
 
     ###############
-    input_filename = 'WBVar_Strains_test.csv'     #the file name of WBVariation numbers 
-    output_filename = 'SNPsData_test.csv' 	  #the result file
+    input_filename = 'sample_input_for_fetch_SNPs_from_wormbase_v2.csv'     #the file name of WBVariation numbers 
+    output_filename = 'sample_output_for_fetch_SNPs_from_wormbase_v2.csv' 	  #the result file
     sleep_time = 0.3 # sec
     ###############
 
