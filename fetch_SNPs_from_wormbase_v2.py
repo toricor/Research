@@ -1,17 +1,24 @@
 # -*- coding: utf-8 -*-
-# FetchSNPsFromWormBaseObjectOrientedCleaned.py
+# set input/output file names!
+# make an input file containing SNPs(WBVariation numbers) you need 
+
+# File Name: fetch_SNPs_from_wormbase_v2.py(Old File Name:FetchSNPsFromWormBaseObjectOrientedCleaned.py)
 # input: WBVariation Number (SNPs data)
 # output: corresponding data from WormBase (Chromosome, physical pos., genetic pos., left flanking seq., 
 # right flanking seq., is applicable the restriction enzyme
 
-# JU258: Strain Name
-# WS244: WormBase Data Version
+# ex. JU258, CB4856, ... : Strain Name
+# ex. WS244: WormBase Data Version
+
+import requests
+import csv
+import time
 
 class WBVar:
     """
     If you want to fetch more data from WormBase, 
     read http://www.wormbase.org/about/userguide/for_developers/api-rest#01--10
-    and  add and/or modify address below. Do not forget to add adequate methods.  
+    and  add and/or modify address below. Do not forget to add adequate methods to this class.  
     """
     fields = ['genomic_position', 'genetic_position', 'flanking_sequences', 'nucleotide_change']
     url_root = 'http://api.wormbase.org/rest/field/variation/'
@@ -89,14 +96,11 @@ class WBVar:
         return wt_count, mut_count, enz_name
 
 if __name__ == "__main__":
-    import requests
-    import csv
-    import time
     error_log = {} # {"WBVar00000899": "Error Message"}
 
     ###############
-    input_filename = 'WBVar_Strains_test.csv'             #WBVar.Num. file name
-    output_filename = 'SNPsData_object_oriented.csv' 	 
+    input_filename = 'WBVar_Strains_test.csv'     #the file name of WBVariation numbers 
+    output_filename = 'SNPsData_test.csv' 	  #the result file
     sleep_time = 0.3 # sec
     ###############
 
