@@ -2,4 +2,4 @@
 
 ※geneIDs.csv  
 http://im-dev.wormbase.org/species/c_elegans/gene#2--10 より<i>C. elegans</i>のGene ID情報を取得した  
-c_elegans.PRJNA13758.current_development.functional_descriptions.txt
+c_elegans.PRJNA13758.current_development.functional_descriptions.txt.gz
