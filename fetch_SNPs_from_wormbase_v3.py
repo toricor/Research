@@ -2,7 +2,7 @@
 # set input/output file names!
 # make an input file containing SNPs(WBVariation numbers) you need 
 
-# File Name: fetch_SNPs_from_wormbase_v2.py(Old File Name:FetchSNPsFromWormBaseObjectOrientedCleaned.py)
+# File Name: fetch_SNPs_from_wormbase_v3.py(Old File Name:FetchSNPsFromWormBaseObjectOrientedCleaned.py)
 # input: WBVariation Number (SNPs data)
 # output: corresponding data from WormBase (Chromosome, physical pos., genetic pos., left flanking seq., 
 # right flanking seq., is applicable the restriction enzyme
