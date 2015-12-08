@@ -1,10 +1,11 @@
 import csv
 import requests
 #import json
+import time
 
 #######################################
-input_filename  = 'geneIDs.csv'       #the file name of WBVariation numbers 
-output_filename = 'output_for_geneID_to_expr_pattern.csv'    #the result file
+input_filename  = 'geneIDs_latter.csv'       #the file name of WBVariation numbers 
+output_filename = 'output_for_geneID_to_expr_pattern_latter.csv'    #the result file
 sleep_time = 0.0                      # sec
 #######################################
 
@@ -18,6 +19,7 @@ for row in b:
     gene_ID = row[0]
     url = "http://www.wormbase.org/rest/widget/gene/" + gene_ID + "/expression"
     try:
+        time.sleep(sleep_time)
         data = requests.get(url, headers=headers).json()
     except:
         continue
