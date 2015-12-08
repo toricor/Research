@@ -5,7 +5,7 @@ import requests
 #######################################
 input_filename  = 'geneIDs.csv'       #the file name of WBVariation numbers 
 output_filename = 'output_for_geneID_to_expr_pattern.csv'    #the result file
-sleep_time = 0.0                      # sec
+sleep_time = 0.5                      # sec
 #######################################
 
 f = open(input_filename, 'rb') 
