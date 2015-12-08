@@ -88,7 +88,7 @@ class WBVar:
         wt_seq = (self.left_flank + self.wildtype + self.right_flank).upper()
         mut_seq = (self.left_flank + self.mutant + self.right_flank).upper()
         if self.left_flank == self.right_flank: # remove blank cells
-            return None
+            return (0,0,0)
         wt_count = 0
         mut_count = 0
         wt_count = wt_seq.count(recog_seq)
@@ -99,9 +99,9 @@ if __name__ == "__main__":
     error_log = {} # {"WBVar00000899": "Error Message"}
 
     ###############
-    input_filename = "WbVarNumToWildIsolate_AB1.csv"#'sample_input_for_fetch_SNPs_from_wormbase_v2.csv'     #the file name of WBVariation numbers 
-    output_filename = "fetched_AB1.csv"#'sample_output_for_fetch_SNPs_from_wormbase_v2.csv' 	  #the result file
-    sleep_time = 0.0#3 # sec
+    input_filename  = 'sample_input_for_fetch_SNPs_from_wormbase_v2.csv'     #the file name of WBVariation numbers 
+    output_filename = 'sample_output_for_fetch_SNPs_from_wormbase_v2.csv'    #the result file
+    sleep_time = 0.3                                                         # sec
     ###############
 
     f = open(input_filename,'rb') 
@@ -120,7 +120,6 @@ if __name__ == "__main__":
         except:
             continue
             
-        
         # parse          
         try:
             variation.set_physical_position()  
@@ -143,7 +142,10 @@ if __name__ == "__main__":
         wt_count = mut_count = 0
         enzyme_name = ''
         for seq,enz in r_enz_list:
-            wt_count, mut_count, enzyme_name = variation.get_count_of_r_enz_site(seq, enz)
+            try:
+                wt_count, mut_count, enzyme_name = variation.get_count_of_r_enz_site(seq, enz)
+            except:
+                break
             if wt_count == mut_count:
                 continue
             else:
