@@ -1,6 +1,7 @@
 import csv
 import requests
 #import json
+import time
 
 #######################################
 input_filename  = 'geneIDs.csv'       #the file name of WBVariation numbers 
@@ -18,6 +19,7 @@ for row in b:
     gene_ID = row[0]
     url = "http://www.wormbase.org/rest/widget/gene/" + gene_ID + "/expression"
     try:
+        time.sleep(sleep_time)
         data = requests.get(url, headers=headers).json()
     except:
         continue
