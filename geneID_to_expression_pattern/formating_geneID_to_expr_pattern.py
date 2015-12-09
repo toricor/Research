@@ -2,8 +2,8 @@
 import csv
 
 #######################################
-input_filename  = 'output_for_geneID_to_expr_pattern.csv'                      #the file name of WBVariation numbers 
-output_filename = 'formatted_output_for_geneID_to_expr_pattern.csv'         #the result file
+input_filename  = 'output_for_geneID_to_expr_pattern.csv'              #the file name of WBVariation numbers 
+output_filename = 'formatted_output_for_geneID_to_expr_pattern.csv'    #the result file
 #######################################
 
 f = open(input_filename, 'rb') 
@@ -13,10 +13,10 @@ c = csv.writer(g)
 
 for row in b:
     gene_id = row[0]
-    gene = row[1]
-    ref = row[2]
+    gene    = row[1]
+    ref     = row[2]
     comment = row[3]
-    sites = row[4:]
+    sites   = row[4:]
     for site in sites:
         if not site:
             break
