@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# wild_isolate_and_SNPcount.py
+# wild_isolate_and_snp_count.py
 
 import csv
 import requests
