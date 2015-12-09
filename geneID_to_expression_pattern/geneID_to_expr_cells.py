@@ -4,9 +4,15 @@ import requests
 import time
 
 #######################################
+<<<<<<< HEAD
 input_filename  = 'geneIDs_latter.csv'       #the file name of WBVariation numbers 
 output_filename = 'output_for_geneID_to_expr_pattern_latter.csv'    #the result file
 sleep_time = 0.0                      # sec
+=======
+input_filename  = 'geneIDs.csv'       #the file name of WBVariation numbers 
+output_filename = 'output_for_geneID_to_expr_pattern.csv'    #the result file
+sleep_time = 0.5                      # sec
+>>>>>>> 860702805172e1c227261b59c99cd99cdd15070b
 #######################################
 
 f = open(input_filename, 'rb') 

@@ -1,0 +1,12 @@
+"#""http://www.wormbase.org/rest/widget/gene/"" + gene_ID + ""/expression""",,,
+#,fields,expression_patterns,data(list)
+fields,anatomy_terms,data,life_stage
+uri,rnaseq_plot,description,transgene
+name,name,,description
+class,anatomic_expression_patterns,,database
+,expression_cluster,,expressed_in
+,expression_profiling_graphs,,go_term
+,anatomy_function,,expression_pattern
+,expression_patterns,,type
+,microarray_topology_map_position,,
+,fourd_expression_movies,,
