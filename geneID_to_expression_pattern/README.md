@@ -7,7 +7,7 @@
         c_elegans.PRJNA13758.current_development.functional_descriptions.txt  
     **(Output)**output_for_geneID_to_expr_pattern.csv or output_for_geneID_to_expr_pattern_no_extracomma.csv
         結果ファイル2種類（余計なコンマつき、及びそれを取り除いたもの）  
-    **※restful_api_response_structure.csv**   
+    **(appendix)restful_api_response_structure.csv**   
     response memo  
     
 ##<a name="2">**formating_geneID_to_expr_pattern.py**  
