@@ -12,7 +12,7 @@ A table of WBVariation Number to wild isolates　(the source code for generating
   
   
   
-**fetch_SNPs_from_wormbase_version.py** (最新版を使用のこと)    
+**fetch_SNPs_from_wormbase_:version.py** (最新版を使用のこと)    
 WormBaseから特定のWBVar番号をもつSNP情報をダウンロードし、csvファイルにまとめる。制限酵素情報も付加する。  
 ※制限酵素：HindIII, NdeI, DraI, EcoRI, EcoRV, PstI, XhoI  
 WBVar番号一覧のファイル(csvファイル)を作成し、入力とする。  
