@@ -8,6 +8,7 @@
 
 import requests
 import csv
+import time
 #import json #レスポンス整形のみ使用
 
 f = open('WBVar_Strains_JU258.csv','r') #読み込むcsvファイル名
@@ -28,6 +29,7 @@ for num in b:
     #HTTPレスポンスget
     try:
         headers = {'content-type': 'application/json'}
+        time.sleep(0.5)
         r1 = requests.get(val_url1, headers=headers)
     except:
         print [wb,'Error requests.get()']
